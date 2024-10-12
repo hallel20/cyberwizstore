@@ -6,6 +6,7 @@ import React from "react";
 import { FaEye } from "react-icons/fa6";
 import { SiCarthrottle } from "react-icons/si";
 import "../globals.css";
+import AdminFooter from "@/components/AdminFooter";
 
 export const metadata = {
   title: "Admin Page For CyberwizStore",
@@ -31,7 +32,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
       >
         <div className="flex">
           {/* Sidebar */}
-          <div className="w-1/6 bg-indigo-950 text-gray-300 min-h-screen flex flex-col justify-between fixed">
+          <div className="w-1/6 bg-slate-800 text-gray-300 min-h-screen flex flex-col justify-between fixed">
             <div>
               <div className="flex align-middle justify-center pt-7">
                 <SiCarthrottle size="40" />
@@ -53,6 +54,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="w-5/6">
             <AdminTopBar />
             {children}
+            <AdminFooter />
           </div>
         </div>
       </body>

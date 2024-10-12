@@ -5,7 +5,26 @@ export const products = [
       name: "Canon Camera",
       price: 124,
       stock: 14,
-      variants: ["120mm", "100mm", "80mm"],
+      variants: [
+        {
+          variantName: "Lens",
+          variantOption: "120mm",
+          priceModifier: 0, // No price change
+          stock: 10,
+        },
+        {
+          variantName: "Lens",
+          variantOption: "100mm",
+          priceModifier: 10, // +$2 for Large
+          stock: 10,
+        },
+        {
+          variantName: "Lens",
+          variantOption: "80mm",
+          priceModifier: 10,
+          stock: 5,
+        },
+      ],
       orders: 5,
       category: "Photography"
     },
@@ -15,7 +34,26 @@ export const products = [
       name: "Unisex Top",
       price: 18,
       stock: 56,
-      variants: ["M", "L", "XL", "XXL"],
+      variants: [
+        {
+          variantName: "Size",
+          variantOption: "Medium",
+          priceModifier: 0, // No price change
+          stock: 50,
+        },
+        {
+          variantName: "Size",
+          variantOption: "Large",
+          priceModifier: 2, // +$2 for Large
+          stock: 50,
+        },
+        {
+          variantName: "Color",
+          variantOption: "Red",
+          priceModifier: 0,
+          stock: 50,
+        },
+      ],
       orders: 20,
       category: "Fashion"
     },

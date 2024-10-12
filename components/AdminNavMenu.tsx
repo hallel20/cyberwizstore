@@ -11,7 +11,6 @@ import {
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 
 const links = [
-  { id: 1, path: "/admin", label: "Home", icon: <FaHouseChimney size="20" /> },
   {
     id: 2,
     path: "/admin/products",
@@ -43,11 +42,21 @@ const AdminNavMenu = () => {
           ADMIN
         </h2>
         <ul className="mt-3">
+          <Link href="/admin">
+            <li
+              className={`p-3 hover:bg-gray-900 flex items-center justify-center sm:justify-start gap-2 ${
+                pathname === "/admin" && "bg-gray-900"
+              }`}
+            >
+              <FaHouseChimney size="20" />
+              <span className="hidden sm:flex">Home</span>
+            </li>
+          </Link>
           {links.map((link) => (
             <Link href={link.path} key={link.id}>
               <li
                 className={`p-3 hover:bg-gray-900 flex items-center justify-center sm:justify-start gap-2 ${
-                  pathname == link.path && "bg-gray-900"
+                  pathname.startsWith(link.path) && "bg-gray-900"
                 }`}
               >
                 {link.icon} <span className="hidden sm:flex">{link.label}</span>
