@@ -4,9 +4,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "127.0.0.1:3000",
+        hostname: "127.0.0.1",
+        port: "3000",
       },
     ],
+  },
+  experimental: {
+    serverActions: true, // Ensure this is enabled
   },
 };
 
